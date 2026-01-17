@@ -1,8 +1,18 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
   reactCompiler: true,
+  images: {
+    domains: ["cdn.sanity.io"], // ✅ whitelist Sanity CDN
+    // Optional: more secure/flexible
+    // remotePatterns: [
+    //   {
+    //     protocol: "https",
+    //     hostname: "cdn.sanity.io",
+    //     pathname: "/images/**",
+    //   },
+    // ],
+  },
 };
 
 export default nextConfig;
